@@ -34,7 +34,7 @@ class CreateRequest extends Validator
         'is_active.in'       => '启用状态只能为启用或禁用',
     ];
 
-    protected array $attributes = [];
-
-    protected array $scenes = [];
+    protected array $scenes = [
+        'update' => ['name', 'email', 'is_active']
+    ];
 }

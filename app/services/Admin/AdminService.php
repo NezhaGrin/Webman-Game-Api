@@ -2,6 +2,7 @@
 
 namespace app\services\Admin;
 
+use app\model\Admin;
 use app\services\BaseService;
 
 class AdminService extends BaseService
@@ -15,5 +16,6 @@ class AdminService extends BaseService
      */
     public function create(array $data) : void
     {
+        Admin::create($data);
     }
 }

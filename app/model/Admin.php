@@ -24,4 +24,16 @@ class Admin extends Model
         'password',
         'is_active',
     ];
+
+    /**
+     * 设置密码时自动哈希
+     * 
+     * @param string $value
+     * 
+     * @return void
+     */
+    public function setPasswordAttribute(string $value) : void
+    {
+        $this->attributes['password'] = password_hash($value, PASSWORD_BCRYPT);
+    }
 }
