@@ -1,8 +1,8 @@
 <?php
 
-use support\validation\ValidationException;
+use app\exception\ValidationException;
 
 return [
-    'enable' => true,
+    'enable'    => true,
     'exception' => ValidationException::class,
 ];
