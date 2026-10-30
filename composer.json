@@ -35,7 +35,8 @@
     "webman/redis": "^2.1",
     "webman/validation": "^2.2",
     "x2nx/webman-migrate": "^0.0.9",
-    "php-di/php-di": "^7.1"
+    "php-di/php-di": "^7.1",
+    "next/var-dumper": "^0.1.0"
   },
   "suggest": {
     "ext-event": "For better performance. "

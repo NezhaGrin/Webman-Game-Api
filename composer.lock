@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc7c69a36b8ab61acd61b7cdbc4119a4",
+    "content-hash": "ccf82d2d6149f9fb60d37c57b7effb0e",
     "packages": [
         {
             "name": "brick/math",
@@ -2938,6 +2938,55 @@
                 }
             ],
             "time": "2026-10-25T14:32:48+00:00"
+        },
+        {
+            "name": "next/var-dumper",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/next-laboratory/var-dumper.git",
+                "reference": "ec86735e0df42240acc57341e4d5c1b8cff6b522"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/next-laboratory/var-dumper/zipball/ec86735e0df42240acc57341e4d5c1b8cff6b522",
+                "reference": "ec86735e0df42240acc57341e4d5c1b8cff6b522",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "symfony/var-dumper": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Next\\VarDumper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "chengyao",
+                    "email": "987861463@qq.com"
+                }
+            ],
+            "homepage": "https://github.com/next-laboratory/var-dumper",
+            "support": {
+                "issues": "https://github.com/next-laboratory/var-dumper/issues",
+                "source": "https://github.com/next-laboratory/var-dumper/tree/0.1"
+            },
+            "time": "2023-10-31T02:27:04+00:00"
         },
         {
             "name": "nikic/fast-route",
