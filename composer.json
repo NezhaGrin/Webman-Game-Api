@@ -34,7 +34,8 @@
     "symfony/var-dumper": "^8.1",
     "webman/redis": "^2.1",
     "webman/validation": "^2.2",
-    "x2nx/webman-migrate": "^0.0.9"
+    "x2nx/webman-migrate": "^0.0.9",
+    "php-di/php-di": "^7.1"
   },
   "suggest": {
     "ext-event": "For better performance. "
