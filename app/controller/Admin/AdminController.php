@@ -47,4 +47,19 @@ class AdminController extends Controller
 
         return $this->successResponse();
     }
+
+    /**
+     * 删除管理员
+     * 
+     * @param Request $request
+     * 
+     * @return Response
+     */
+    #[Validate(validator: AdminRequest::class, scene: 'delete')]
+    public function delete(Request $request) : Response
+    {
+        $this->adminService->delete($request->input('id'));
+
+        return $this->successResponse();
+    }
 }

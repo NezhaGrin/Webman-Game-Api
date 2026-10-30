@@ -38,4 +38,16 @@ class AdminService extends BaseService
 
         $adminModel->update($data);
     }
+
+    /**
+     * 删除管理员
+     * 
+     * @param int $id
+     * 
+     * @return void
+     */
+    public function delete(int $id) : void
+    {
+        Admin::destroy($id);
+    }
 }

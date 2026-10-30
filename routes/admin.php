@@ -10,4 +10,7 @@ Route::group('/admin', function ()
 
     // 更新管理员
     Route::post('/update', [app\controller\Admin\AdminController::class, 'update'])->name('admin.update');
+
+    // 删除管理员
+    Route::post('/delete', [app\controller\Admin\AdminController::class, 'delete'])->name('admin.delete');
 });

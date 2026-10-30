@@ -41,6 +41,7 @@ class AdminRequest extends Validator
 
     protected array $scenes = [
         'create' => ['name', 'email', 'password', 'is_active'],
-        'update' => ['id', 'name', 'password', 'is_active']
+        'update' => ['id', 'name', 'password', 'is_active'],
+        'delete' => ['id'],
     ];
 }
