@@ -34,6 +34,6 @@ class Admin extends Model
      */
     public function setPasswordAttribute(string $value) : void
     {
-        $this->attributes['password'] = password_hash($value, PASSWORD_BCRYPT);
+        $this->attributes['password'] = password_hash($value, PASSWORD_BCRYPT, ['cost' => 10]);
     }
 }

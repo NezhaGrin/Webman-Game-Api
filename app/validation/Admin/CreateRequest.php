@@ -11,7 +11,7 @@ class CreateRequest extends Validator
         'id'        => 'required|integer|min:1',
         'name'      => 'required|string|max:10',
         'email'     => 'required|email|max:50|unique:admins,email',
-        'password'  => 'required|string|min:8|max:16',
+        'password'  => 'required|string|min:6|max:16',
         'is_active' => 'required|integer|in:0,1',
     ];
 
@@ -31,7 +31,7 @@ class CreateRequest extends Validator
 
         'password.required'  => '请输入密码',
         'password.string'    => '密码必须是字符串',
-        'password.min'       => '密码不能少于8个字符',
+        'password.min'       => '密码不能少于6个字符',
         'password.max'       => '密码不能超过16个字符',
 
         'is_active.required' => '请选择启用状态',
