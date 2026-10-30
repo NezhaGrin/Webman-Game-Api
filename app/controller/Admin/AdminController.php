@@ -7,7 +7,7 @@ use support\Response;
 use DI\Attribute\Inject;
 use app\controller\Controller;
 use app\services\Admin\AdminService;
-use app\validation\Admin\CreateRequest;
+use app\validation\Admin\AdminRequest;
 use support\validation\annotation\Validate;
 
 class AdminController extends Controller
@@ -25,7 +25,7 @@ class AdminController extends Controller
      * 
      * @return Response
      */
-    #[Validate(validator: CreateRequest::class, scene: 'create')]
+    #[Validate(validator: AdminRequest::class, scene: 'create')]
     public function create(Request $request) : Response
     {
         $this->adminService->create($request->only(['name', 'email', 'password', 'is_active']));
@@ -40,7 +40,7 @@ class AdminController extends Controller
      * 
      * @return Response
      */
-    #[Validate(validator: CreateRequest::class, scene: 'update')]
+    #[Validate(validator: AdminRequest::class, scene: 'update')]
     public function update(Request $request) : Response
     {
         $this->adminService->update($request->only(['id', 'name', 'password', 'is_active']));

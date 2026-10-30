@@ -5,7 +5,7 @@ namespace app\validation\Admin;
 
 use support\validation\Validator;
 
-class CreateRequest extends Validator
+class AdminRequest extends Validator
 {
     protected array $rules = [
         'id'        => 'required|integer|min:1',
