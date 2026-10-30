@@ -25,10 +25,25 @@ class AdminController extends Controller
      * 
      * @return Response
      */
-    #[Validate(validator: CreateRequest::class)]
+    #[Validate(validator: CreateRequest::class, scene: 'create')]
     public function create(Request $request) : Response
     {
         $this->adminService->create($request->only(['name', 'email', 'password', 'is_active']));
+
+        return $this->successResponse();
+    }
+
+    /**
+     * 更新管理员
+     * 
+     * @param Request $request
+     * 
+     * @return Response
+     */
+    #[Validate(validator: CreateRequest::class, scene: 'update')]
+    public function update(Request $request) : Response
+    {
+        $this->adminService->update($request->only(['id', 'name', 'password', 'is_active']));
 
         return $this->successResponse();
     }

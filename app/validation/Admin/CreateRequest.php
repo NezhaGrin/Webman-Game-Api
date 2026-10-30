@@ -8,6 +8,7 @@ use support\validation\Validator;
 class CreateRequest extends Validator
 {
     protected array $rules = [
+        'id'        => 'required|integer|min:1',
         'name'      => 'required|string|max:10',
         'email'     => 'required|email|max:50|unique:admins,email',
         'password'  => 'required|string|min:8|max:16',
@@ -15,6 +16,10 @@ class CreateRequest extends Validator
     ];
 
     protected array $messages = [
+        'id.required'        => '参数错误',
+        'id.integer'         => '参数错误',
+        'id.min'             => '参数错误',
+
         'name.required'      => '请输入管理员名称',
         'name.string'        => '管理员名称必须是字符串',
         'name.max'           => '管理员名称不能超过10个字符',
@@ -35,6 +40,7 @@ class CreateRequest extends Validator
     ];
 
     protected array $scenes = [
-        'update' => ['name', 'email', 'is_active']
+        'create' => ['name', 'email', 'password', 'is_active'],
+        'update' => ['id', 'name', 'password', 'is_active']
     ];
 }
